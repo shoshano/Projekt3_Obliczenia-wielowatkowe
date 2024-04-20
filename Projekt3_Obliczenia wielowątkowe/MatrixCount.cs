@@ -11,6 +11,7 @@ namespace Projekt3_Obliczenia_wielowątkowe
         public Matrix MatrixA { get; set; }
         public Matrix MatrixB { get; set; }
         public Matrix MatrixC { get; set; }
+        public int n;
 
         public MatrixCount(Matrix MatA, Matrix MatB) 
         {
@@ -30,7 +31,7 @@ namespace Projekt3_Obliczenia_wielowątkowe
             }
         }
 
-        public void Run(int n)
+        public void Run()
         {
             Multiply(n);
         }

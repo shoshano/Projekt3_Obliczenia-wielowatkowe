@@ -13,10 +13,11 @@ namespace Projekt3_Obliczenia_wielowątkowe
 {
     public partial class FormMatrix : Form
     {
-        Thread[] threads;
-        public FormMatrix()
+        public Thread[] threads;
+        public FormMatrix(int n)
         {
             InitializeComponent();
+            threads = new Thread[n];
 
         }
 
@@ -25,7 +26,7 @@ namespace Projekt3_Obliczenia_wielowątkowe
 
             for (int i = 0; i < NrOfThreads; i++)
             {
-                threads[i] = new Thread(new MatrixCount(MatA, MatB).Run(i));
+                threads[i] = new Thread(new MatrixCount(MatA, MatB).Run);
                 threads[i].Start();
             }
         }
