@@ -8,6 +8,16 @@ namespace Projekt3_Obliczenia_wielowątkowe
 {
     public class Matrix
     {
+        /* liczba kolumn 5
+         * | x x x x x | 
+         * | x x x x x | liczba wierszy 6
+         * | x x x x x |
+         * | x x x x x |
+         * | x x x x x |
+         * | x x x x x |
+         * [l. wierszy , l. kolumn]
+         * 
+         */
         public int NrOfCols {get; set;}
         public int NrOfRows { get; set;}
         public int[,] Values { get; set;}
@@ -17,20 +27,35 @@ namespace Projekt3_Obliczenia_wielowątkowe
         {
             this.NrOfCols = nrOfCols;
             this.NrOfRows = nrOfRows;
+            Values = new int[nrOfRows, nrOfCols];
             rnd = new Random();
-            FillMatrix();
-
         }
 
         public void FillMatrix()
         {
-            for( int i = 0; i < NrOfCols; i++)
+            Values = new int[NrOfRows, NrOfCols];
+            for ( int i = 0; i < NrOfRows; i++)
             {
-                for ( int j = 0; j < NrOfRows; j++)
+                for ( int j = 0; j < NrOfCols; j++)
                 {
-                    Values[i, j] = rnd.Next(1, 20);
+                    Values[i,j] = rnd.Next(1, 10);
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            string matrixView = string.Empty;
+            for ( int i = 0; i <NrOfRows; i++)
+            {
+                for (int j = 0; j < NrOfCols; j++)
+                {
+                    matrixView += Values[i, j];
+                    matrixView += " ";
+                }
+                matrixView += Environment.NewLine;
+            }
+            return matrixView;
         }
     }
 }
