@@ -42,7 +42,7 @@ namespace Projekt3_Obliczenia_wielowątkowe
                 worksheetW.AllocatedRange.AutoFitColumns();
                 worksheetP.AllocatedRange.AutoFitColumns();
             }
-            workbook.SaveToFile("C:\\Users\\user\\Desktop\\studia\\Semestr_6\\.Net_i_Java\\Projekt3_Obliczenia-wielowatkowe\\Badania.xlsx", ExcelVersion.Version2016);
+            workbook.SaveToFile("D:\\zuzka\\Studia\\Sem6\\.Net_Java\\Projekt3_Obliczenia wielowątkowe\\Badania.xlsx", ExcelVersion.Version2016);
         }
 
         public void insertValuseW(double[] times, int testNr, int matSize) // testNr od 1 do 10, matSize od 0 do 3
@@ -51,7 +51,7 @@ namespace Projekt3_Obliczenia_wielowątkowe
             {
                 worksheetW.Range[2+testNr+20*matSize, i+2].Value = times[i].ToString();
             }
-            workbook.SaveToFile("C:\\Users\\user\\Desktop\\studia\\Semestr_6\\.Net_i_Java\\Projekt3_Obliczenia-wielowatkowe\\Badania.xlsx", ExcelVersion.Version2016);
+            workbook.SaveToFile("D:\\zuzka\\Studia\\Sem6\\.Net_Java\\Projekt3_Obliczenia wielowątkowe\\Badania.xlsx", ExcelVersion.Version2016);
         }
 
         public void insertValuseP(double[] times, int testNr, int matSize) // testNr od 1 do 10, matSize od 0 do 3
@@ -60,7 +60,7 @@ namespace Projekt3_Obliczenia_wielowątkowe
             {
                 worksheetP.Range[2+testNr+20*matSize, i+2].Value = times[i].ToString();
             }
-            workbook.SaveToFile("C:\\Users\\user\\Desktop\\studia\\Semestr_6\\.Net_i_Java\\Projekt3_Obliczenia-wielowatkowe\\Badania.xlsx", ExcelVersion.Version2016);
+            workbook.SaveToFile("D:\\zuzka\\Studia\\Sem6\\.Net_Java\\Projekt3_Obliczenia wielowątkowe\\Badania.xlsx", ExcelVersion.Version2016);
         }
     }
 }
